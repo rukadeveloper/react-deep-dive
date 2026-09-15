@@ -1,0 +1,5 @@
+﻿export const CAFETERIA_ACTIONS = {
+    ADD_RICE: 'ADD_RICE',
+    REFILL_SOUP: 'REFILL_SOUP',
+    CHANGE_MENU: 'CHANGE_MENU'
+}

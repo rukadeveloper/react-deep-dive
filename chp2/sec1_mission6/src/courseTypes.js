@@ -1,0 +1,5 @@
+﻿export const COURSE_TYPES = {
+    INCREMENT: "INCREMENT",
+    DECREMENT: "DECREMENT",
+    REMOVE: "REMOVE"
+}

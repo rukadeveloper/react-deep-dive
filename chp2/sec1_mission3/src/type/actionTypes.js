@@ -1,0 +1,4 @@
+﻿export const ACTION_TYPES = {
+    TOGGLE_SEAT: "TOGGLE_SEAT",
+    TOGGLE_VIP: "TOGGLE_VIP"
+}
