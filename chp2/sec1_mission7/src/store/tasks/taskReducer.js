@@ -2,7 +2,12 @@
 
 export default function taskReducer(state, action) {
     switch (action.type) {
-        case TASK_ACTIONS.ADD_TASK:
+        case TASK_ACTIONS.ADD_TASK: {
+            if (!action.item.input.trim()) {
+                alert("비어있으면 안됩니다!")
+                return state
+            }
+
             return [
                 ...state,
                 {
@@ -10,6 +15,7 @@ export default function taskReducer(state, action) {
                     ...action.item
                 }
             ]
+        }
         case TASK_ACTIONS.TOGGLE_TASK:
             return state.map(item => item.id === action.id ? { ...item, isComplete: !item.isComplete } : item)
         case TASK_ACTIONS.UPDATE_PRIORITY:
