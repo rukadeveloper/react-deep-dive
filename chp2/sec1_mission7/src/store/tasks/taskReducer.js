@@ -3,8 +3,8 @@
 export default function taskReducer(state, action) {
     switch (action.type) {
         case TASK_ACTIONS.ADD_TASK: {
-            if (!action.item.input.trim()) {
-                alert("비어있으면 안됩니다!")
+            if (!action.item.input.trim() || action.item.input.length >= 10) {
+                alert("비어 있으면 안되거나, 10글자 이상이면 곤란합니다.")
                 return state
             }
 

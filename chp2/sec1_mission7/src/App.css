@@ -1,4 +1,5 @@
-html, body {
+html,
+body {
     margin: 0;
     padding: 0;
 }
@@ -11,8 +12,9 @@ html, body {
     align-items: center;
 }
 
-#wrap > div.taskInput {
+#wrap>div.taskInput {
     margin-top: 20px;
+
     input {
         width: 300px;
         box-sizing: border-box;
@@ -21,10 +23,27 @@ html, body {
         border-radius: 10px;
         border: 1px solid black;
     }
+
     button {
         background-color: black;
         color: white;
         border: none;
         padding: 16px 10px;
+    }
+}
+
+#wrap div.taskItem {
+    p.lineThrough {
+        position: relative;
+
+        &:after {
+            content: '';
+            position: absolute;
+            left: 0;
+            right: 0;
+            height: 2px;
+            top: 13px;
+            background-color: black;
+        }
     }
 }
